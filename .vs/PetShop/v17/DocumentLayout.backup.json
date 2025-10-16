@@ -93,7 +93,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -113,32 +113,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Uindex.aspx.cs",
-              "DocumentMoniker": "D:\\23FOTCA11075_DIYA\\PetShop\\Uindex.aspx.cs",
-              "RelativeDocumentMoniker": "Uindex.aspx.cs",
-              "ToolTip": "D:\\23FOTCA11075_DIYA\\PetShop\\Uindex.aspx.cs",
-              "RelativeToolTip": "Uindex.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T05:01:37.025Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Aadd_product.aspx.cs",
-              "DocumentMoniker": "D:\\23FOTCA11075_DIYA\\PetShop\\admin\\Aadd_product.aspx.cs",
-              "RelativeDocumentMoniker": "admin\\Aadd_product.aspx.cs",
-              "ToolTip": "D:\\23FOTCA11075_DIYA\\PetShop\\admin\\Aadd_product.aspx.cs",
-              "RelativeToolTip": "admin\\Aadd_product.aspx.cs",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAAAKkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T04:35:59.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Product.aspx",
               "DocumentMoniker": "D:\\23FOTCA11075_DIYA\\PetShop\\Product.aspx",
@@ -152,6 +126,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "dbo.Aregister.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__23FOTCA11075_DIYA_PETSHOP_APP_DATA_PETSHOP.MDF/True/SqlTable/dbo.Aregister.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__23FOTCA11075_DIYA_PETSHOP_APP_DATA_PETSHOP.MDF/True/SqlTable/dbo.Aregister.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-10-08T04:53:38.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Uindex.aspx.cs",
+              "DocumentMoniker": "D:\\23FOTCA11075_DIYA\\PetShop\\Uindex.aspx.cs",
+              "RelativeDocumentMoniker": "Uindex.aspx.cs",
+              "ToolTip": "D:\\23FOTCA11075_DIYA\\PetShop\\Uindex.aspx.cs",
+              "RelativeToolTip": "Uindex.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T05:01:37.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Aadd_product.aspx.cs",
+              "DocumentMoniker": "D:\\23FOTCA11075_DIYA\\PetShop\\admin\\Aadd_product.aspx.cs",
+              "RelativeDocumentMoniker": "admin\\Aadd_product.aspx.cs",
+              "ToolTip": "D:\\23FOTCA11075_DIYA\\PetShop\\admin\\Aadd_product.aspx.cs",
+              "RelativeToolTip": "admin\\Aadd_product.aspx.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAAAKkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T04:35:59.913Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "ViewDetails.aspx.cs",
               "DocumentMoniker": "D:\\23FOTCA11075_DIYA\\PetShop\\ViewDetails.aspx.cs",
@@ -160,8 +167,7 @@
               "RelativeToolTip": "ViewDetails.aspx.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAqwCoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T14:25:44.562Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T14:25:44.562Z"
             },
             {
               "$type": "Document",
@@ -171,10 +177,8 @@
               "RelativeDocumentMoniker": "ViewDetails.aspx",
               "ToolTip": "D:\\23FOTCA11075_DIYA\\PetShop\\ViewDetails.aspx",
               "RelativeToolTip": "ViewDetails.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-10-07T14:21:11.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T14:21:11.893Z"
             },
             {
               "$type": "Document",
@@ -184,10 +188,8 @@
               "RelativeDocumentMoniker": "Uindex.aspx",
               "ToolTip": "D:\\23FOTCA11075_DIYA\\PetShop\\Uindex.aspx",
               "RelativeToolTip": "Uindex.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-09-17T04:41:51.01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-17T04:41:51.01Z"
             },
             {
               "$type": "Document",
@@ -199,8 +201,7 @@
               "RelativeToolTip": "Product.aspx.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAlwEwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T15:23:55.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T15:23:55.735Z"
             },
             {
               "$type": "Document",
@@ -210,10 +211,8 @@
               "RelativeDocumentMoniker": "Uregister.aspx",
               "ToolTip": "D:\\23FOTCA11075_DIYA\\PetShop\\Uregister.aspx",
               "RelativeToolTip": "Uregister.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-09-17T05:13:49.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-17T05:13:49.709Z"
             },
             {
               "$type": "Document",
@@ -225,8 +224,7 @@
               "RelativeToolTip": "dog.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T05:16:14.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-08T05:16:14.286Z"
             },
             {
               "$type": "Document",
@@ -238,8 +236,7 @@
               "RelativeToolTip": "cart.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T05:16:18.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-08T05:16:18.311Z"
             },
             {
               "$type": "Document",
@@ -249,10 +246,8 @@
               "RelativeDocumentMoniker": "Ulogin.aspx",
               "ToolTip": "D:\\23FOTCA11075_DIYA\\PetShop\\Ulogin.aspx",
               "RelativeToolTip": "Ulogin.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-09-17T05:07:56.164Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-17T05:07:56.164Z"
             },
             {
               "$type": "Document",
@@ -262,10 +257,8 @@
               "RelativeDocumentMoniker": "ViewDetail.aspx",
               "ToolTip": "D:\\23FOTCA11075_DIYA\\PetShop\\ViewDetail.aspx",
               "RelativeToolTip": "ViewDetail.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-10-07T07:02:53.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T07:02:53.415Z"
             },
             {
               "$type": "Document",
@@ -275,19 +268,8 @@
               "RelativeDocumentMoniker": "cat.aspx",
               "ToolTip": "D:\\23FOTCA11075_DIYA\\PetShop\\cat.aspx",
               "RelativeToolTip": "cat.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-10-08T04:30:05.751Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "dbo.Aregister.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__23FOTCA11075_DIYA_PETSHOP_APP_DATA_PETSHOP.MDF/True/SqlTable/dbo.Aregister.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__23FOTCA11075_DIYA_PETSHOP_APP_DATA_PETSHOP.MDF/True/SqlTable/dbo.Aregister.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-10-08T04:53:38.606Z"
+              "WhenOpened": "2025-10-08T04:30:05.751Z"
             },
             {
               "$type": "Document",
@@ -333,7 +315,6 @@
               "RelativeDocumentMoniker": "User.Master",
               "ToolTip": "D:\\23FOTCA11075_DIYA\\PetShop\\User.Master",
               "RelativeToolTip": "User.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-09-23T07:05:16.291Z",
               "EditorCaption": ""
