@@ -84,6 +84,7 @@
     <Content Include="cart.aspx" />
     <Content Include="cat.aspx" />
     <Content Include="cat-food.aspx" />
+    <Content Include="dd.aspx" />
     <Content Include="dog.aspx" />
     <Content Include="dog-food.aspx" />
     <Content Include="Product.aspx" />
@@ -181,6 +182,13 @@
     </Compile>
     <Compile Include="cat-food.aspx.designer.cs">
       <DependentUpon>cat-food.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dd.aspx.cs">
+      <DependentUpon>dd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dd.aspx.designer.cs">
+      <DependentUpon>dd.aspx</DependentUpon>
     </Compile>
     <Compile Include="dog.aspx.cs">
       <DependentUpon>dog.aspx</DependentUpon>
