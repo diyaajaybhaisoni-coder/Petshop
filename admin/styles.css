@@ -1,0 +1,163 @@
+:root {
+  --bg: #e6f2ff;        /* light blue background */
+  --panel: #dbeafe;     /* navbar panel light blue */
+  --card: #eff6ff;      /* card background very light blue */
+  --text: #0f172a;      /* dark text for contrast */
+  --muted: #334155;     /* slate for muted text */
+  --primary: #3b82f6;   /* blue primary */
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --border: #93c5fd;    /* light blue border */
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color: var(--text); background: linear-gradient(180deg, #f0f7ff, var(--bg)); font-weight: 700; }
+
+/* Top Navigation Bar */
+.navbar { 
+  background: var(--panel); 
+  border-bottom: 1px solid var(--border); 
+  padding: 0 20px; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  z-index: 1000; 
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand { 
+  font-weight: 700; 
+  letter-spacing: 0.5px; 
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.navbar nav { 
+  display: flex; 
+  gap: 8px; 
+  align-items: center;
+}
+
+.navbar a { 
+  color: var(--text); 
+  text-decoration: none; 
+  padding: 8px 16px; 
+  border-radius: 8px; 
+  background: transparent; 
+  border: 1px solid transparent; 
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.navbar a:hover { 
+  background: #e0efff; 
+  border-color: var(--border); 
+}
+
+.navbar a.active { 
+  background: #e0efff; 
+  border-color: var(--border); 
+  color: var(--primary);
+}
+
+.logout { 
+  background: var(--danger); 
+  color: white; 
+  border: none; 
+  padding: 10px 16px; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.logout:hover {
+  background: #dc2626;
+}
+
+.content { 
+  margin-top: 70px; 
+  padding: 24px; 
+  width: 100%; 
+  min-height: calc(100vh - 70px);
+}
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.stat { font-size: 32px; font-weight: 700; margin-top: 8px; }
+
+.form { display: grid; gap: 12px; }
+label { display: grid; gap: 6px; }
+input, select, textarea { background: #ffffff; color: var(--text); border: 1px solid var(--border); padding: 10px; border-radius: 8px; }
+textarea { min-height: 100px; }
+.primary { background: var(--primary); color: #ffffff; font-weight: 700; border: none; padding: 10px 12px; border-radius: 8px; cursor: pointer; }
+.danger { background: var(--danger); color: white; border: none; padding: 6px 10px; border-radius: 6px; cursor: pointer; }
+.warning { background: var(--warning); color: #3a2c00; border: none; padding: 6px 10px; border-radius: 6px; cursor: pointer; }
+.muted { color: var(--muted); font-size: 12px; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; }
+
+.auth-container { margin: auto; width: 100%; max-width: 420px; padding: 24px; }
+
+.toolbar { display: flex; gap: 8px; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.toolbar .search { flex: 1; }
+
+.thumb { width: 56px; height: 56px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); }
+
+.hidden { display: none !important; }
+
+@media (max-width: 900px) {
+  .navbar { 
+    padding: 0 15px; 
+    height: 60px;
+  }
+  
+  .navbar nav { 
+    gap: 4px; 
+  }
+  
+  .navbar a { 
+    padding: 6px 12px; 
+    font-size: 0.8rem;
+  }
+  
+  .brand { 
+    font-size: 1.2rem; 
+  }
+  
+  .content { 
+    margin-top: 60px; 
+    padding: 16px; 
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar { 
+    flex-direction: column; 
+    height: auto; 
+    padding: 10px 15px; 
+  }
+  
+  .navbar nav { 
+    margin-top: 10px; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+  }
+  
+  .navbar a { 
+    padding: 8px 12px; 
+    font-size: 0.8rem;
+  }
+  
+  .content { 
+    margin-top: 120px; 
+  }
+}
+
+
