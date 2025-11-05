@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="PetShop.admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - PetShop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="admin.js"></script>
+</head>
+<body data-require-auth="true">
+    <nav class="navbar">
+        <div class="brand">PetShop Admin</div>
+        <nav>
+            <a href="index.aspx" class="active">Dashboard</a>
+            <a href="categories.aspx">Add Category</a>
+            <a href="products.aspx">Add Product</a>
+            <a href="show-products.aspx">Show Products</a>
+            <a href="contacts.aspx">Contacts</a>
+            <a href="users.aspx">Users</a>
+            <a href="carts.aspx">Carts</a>
+        </nav>
+        <button id="logoutBtn" class="logout">Logout</button>
+    </nav>
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    <main class="content">
+        <h1>Dashboard</h1>
+        <div class="grid">
+            <div class="card">
+                <h3>Total Categories</h3>
+                <div id="statCategories" class="stat">0</div>
+            </div>
+            <div class="card">
+                <h3>Total Products</h3>
+                <div id="statProducts" class="stat">0</div>
+            </div>
+            <div class="card">
+                <h3>Total Users</h3>
+                <div id="statUsers" class="stat">0</div>
+            </div>
+            <div class="card">
+                <h3>Contacts</h3>
+                <div id="statContacts" class="stat">0</div>
+            </div>
+            <div class="card">
+                <h3>Carts</h3>
+                <div id="statCarts" class="stat">0</div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const { getAll } = AdminStorage;
+            document.getElementById('statCategories').textContent = getAll('categories').length;
+            document.getElementById('statProducts').textContent = getAll('products').length;
+            document.getElementById('statUsers').textContent = getAll('users').length;
+            document.getElementById('statContacts').textContent = getAll('contacts').length;
+            document.getElementById('statCarts').textContent = getAll('carts').length;
+        });
+    </script>
+</body>
+</html>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
