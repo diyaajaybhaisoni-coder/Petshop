@@ -9,6 +9,223 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>PetShop - Your Pet's Best Friend</title>
         <link rel="stylesheet" href="styles.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <style>
+            /* 🔹 સામાન્ય સ્ટાઈલ */
+body {
+    font-family: "Noto Sans Gujarati", "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* 🔹 નાવબાર */
+/* 🔹 Navbar Design */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 10px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff6b6b;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-logo i {
+  color: #ff6b6b;
+  font-size: 24px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: #ff6b6b;
+}
+
+/* 🔹 Login / Register Button */
+.nav-buttons a {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 25px;
+  transition: 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.login-btn {
+  color: #333;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.register-btn {
+  background: #ff6b6b;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.login-btn:hover {
+  background: #f8f8f8;
+}
+
+.register-btn:hover {
+  background: #ff4040;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  .nav-container {
+    justify-content: space-between;
+  }
+}
+
+/* 🔹 ફોર્મ વિભાગ */
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    background-color: #f5f5f5;
+}
+
+.form-container {
+    background: #fff;
+    border-radius: 10px;
+    padding: 35px 40px;
+    width: 450px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+/* 🔹 ફોર્મ ઈનપુટ */
+.form-group, .form-row {
+    margin-bottom: 18px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.form-group label, .form-container asp\:label {
+    display: block;
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea,
+asp\:TextBox {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #ff6b6b;
+    outline: none;
+}
+
+/* 🔹 બટન */
+.btn, .asp\:Button, input[type="submit"], .btn-primary {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6b6b;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff4040;
+}
+
+/* 🔹 ફાઈલ અપલોડ */
+.file-upload-display {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    border-radius: 6px;
+    text-align: center;
+    color: #777;
+}
+
+/* 🔹 ફૂટર (વૈકલ્પિક) */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #fff;
+    color: #666;
+    font-size: 14px;
+    border-top: 1px solid #eee;
+}
+
+/* 🔹 રિસ્પોન્સિવ */
+@media (max-width: 600px) {
+    .form-container {
+        width: 90%;
+        padding: 25px;
+    }
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+        </style>
     </head>
     <body>
     <!-- Navigation -->
@@ -19,16 +236,12 @@
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="Uindex.aspx" class="nav-link active">Home</a> </li>
-                    <li class="nav-item dropdown"><a href="#" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="dog.aspx">Dogs</a> <a href="cat.aspx">Cats</a> <a href="dog-food.aspx">Dog Food</a> <a href="cat-food.aspx">Cat Food</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a href="about.aspx" class="nav-link">About Us</a> </li>
-                    <li class="nav-item"><a href="contact.aspx" class="nav-link">Contact</a> </li>
+                    <li class="nav-item"><a href="Product.aspx" class="nav-link">Product</a> </li>
+                    <li class="nav-item"><a href="Uabout.aspx" class="nav-link">About Us</a> </li>
+                    <li class="nav-item"><a href="Ucontact.aspx" class="nav-link">Contact</a> </li>
                 </ul>
-                <div class="nav-actions">
-                    <a href="cart.aspx" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span> </a><a href="admin/login.aspx" class="admin-btn" style="background: #2c3e50; color: white; padding: 8px 16px; border-radius: 25px; text-decoration: none; font-weight: 500; transition: all 0.3s ease;"><i class="fas fa-shield-alt"></i>Admin </a><a href="login.aspx" class="login-btn">Login</a> <a href="Uregister.aspx" class="register-btn">Register</a>
+                <div>
+                    <a href="Ulogin.aspx" class="login-btn">Login</a> <a href="Uregister.aspx" class="register-btn">Register</a>
                 </div>
                 <div class="hamburger">
                     <span class="bar"></span><span class="bar"></span><span class="bar"></span>
@@ -162,55 +375,5 @@
 </section>
 </asp:Content>
 <asp:Content ID="Content4" runat="server" contentplaceholderid="ContentPlaceHolder3">
-                
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>PetShop</h3>
-                    <p>
-                        Your trusted partner in pet care for over 10 years.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.aspx">Home</a></li>
-                        <li><a href="about.aspx">About Us</a></li>
-                        <li><a href="contact.aspx">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Products</h4>
-                    <ul>
-                        <li><a href="dog.aspx">Dogs</a></li>
-                        <li><a href="cat.aspx">Cats</a></li>
-                        <li><a href="dog-food.aspx">Dog Food</a></li>
-                        <li><a href="cat-food.aspx">Cat Food</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>
-                        <i class="fas fa-phone"></i>+1 (555) 123-4567</p>
-                    <p>
-                        <i class="fas fa-envelope"></i>info@petshop.com</p>
-                    <p>
-                        <i class="fas fa-map-marker-alt"></i>123 Pet Street, City</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>
-                    &copy; 2024 PetShop. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
             </asp:Content>
 

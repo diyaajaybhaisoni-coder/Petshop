@@ -81,11 +81,7 @@
     <Content Include="App_Data\Petshop_log.ldf">
       <DependentUpon>Petshop.mdf</DependentUpon>
     </Content>
-    <Content Include="cart.aspx" />
-    <Content Include="cat.aspx" />
-    <Content Include="cat-food.aspx" />
-    <Content Include="dog.aspx" />
-    <Content Include="dog-food.aspx" />
+    <Content Include="Cart.aspx" />
     <Content Include="Product.aspx" />
     <Content Include="Uabout.aspx" />
     <Content Include="Ucontact.aspx" />
@@ -161,40 +157,12 @@
     <Compile Include="admin\Auser.aspx.designer.cs">
       <DependentUpon>Auser.aspx</DependentUpon>
     </Compile>
-    <Compile Include="cart.aspx.cs">
-      <DependentUpon>cart.aspx</DependentUpon>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cart.aspx.designer.cs">
-      <DependentUpon>cart.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="cat.aspx.cs">
-      <DependentUpon>cat.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="cat.aspx.designer.cs">
-      <DependentUpon>cat.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="cat-food.aspx.cs">
-      <DependentUpon>cat-food.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="cat-food.aspx.designer.cs">
-      <DependentUpon>cat-food.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="dog.aspx.cs">
-      <DependentUpon>dog.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="dog.aspx.designer.cs">
-      <DependentUpon>dog.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="dog-food.aspx.cs">
-      <DependentUpon>dog-food.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="dog-food.aspx.designer.cs">
-      <DependentUpon>dog-food.aspx</DependentUpon>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>

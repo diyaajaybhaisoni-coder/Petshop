@@ -75,6 +75,33 @@ namespace PetShop
                 int id = Convert.ToInt32(e.CommandArgument);
                 Response.Redirect("ViewDetails.aspx?id=" + id);
             }
+            else if (e.CommandName == "cmd_add")
+            {
+                getcon();
+                da = new SqlDataAdapter("Select * from Uregister where email ='" + Session["admin"] + "'", con);
+                ds = new DataSet();
+                da.Fill(ds);
+
+                int userid = Convert.ToInt16(ds.Tables[0].Rows[0][0]);
+                int prodid = Convert.ToInt32(e.CommandArgument);
+
+                da = new SqlDataAdapter("Select * from add_prod where Id = '" + prodid + "'", con);
+                ds = new DataSet();
+                da.Fill(ds);
+
+
+                string name = ds.Tables[0].Rows[0][3].ToString();
+                string price = ds.Tables[0].Rows[0][5].ToString();
+                string img = ds.Tables[0].Rows[0][2].ToString();
+                string Category = ds.Tables[0].Rows[0]["Category"].ToString();
+
+                int Quantity = 1;
+
+                cmd = new SqlCommand("INSERT INTO Cartt(User_Cart_Id, Prod_cart_Id, Image, Name, Category, Price, Quantity) VALUES ('" + userid + "','" + prodid + "','" + img + "','" + name + "','" + Category + "','" + price + "','" + Quantity + "')", con);
+
+                cmd.ExecuteNonQuery();
+
+            }
         }
 
         protected void ddlCategory_SelectedIndexChanged(object sender, EventArgs e)
@@ -126,6 +153,11 @@ namespace PetShop
             da.Fill(ds);
             DataList1.DataSource = ds;
             DataList1.DataBind();
+        }
+
+        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         void filllist()

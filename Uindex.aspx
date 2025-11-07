@@ -19,18 +19,19 @@
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="Uindex.aspx" class="nav-link active">Home</a> </li>
-                    <li class="nav-item dropdown"><a href="#" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+                    <%--<li class="nav-item dropdown"><a href="#" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
                         <a href="Product.aspx">Products</a>
-                        <div class="dropdown-content">
+                        q<div class="dropdown-content">
                             <a href="dog.aspx">Dogs</a> <a href="cat.aspx">Cats</a> <a href="dog-food.aspx">Dog Food</a> <a href="cat-food.aspx">Cat Food</a>
                         </div>
-                    </li>
+                    </li>--%>
+                    <li class="nav-item"><a href="Product.aspx" class="nav-link">Product</a> </li>
                     <li class="nav-item"><a href="Uabout.aspx" class="nav-link">About Us</a> </li>
                     <li class="nav-item"><a href="Ucontact.aspx" class="nav-link">Contact</a> </li>
+                    <li class="nav-item"><a href="Cart.aspx" class="nav-link">Cart</a> </li>
                 </ul>
-                <div class="nav-actions">
-                    <a href="cart.aspx" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span> </a><%--<a href="admin/login.aspx" class="admin-btn" style="background: #2c3e50; color: white; padding: 8px 16px; border-radius: 25px; text-decoration: none; font-weight: 500; transition: all 0.3s ease;"><i class="fas fa-shield-alt"></i>Admin </a>--%>
-                    <a href="Ulogin.aspx" class="login-btn">Login</a> <a href="Uregister.aspx" class="register-btn">Register</a> 
+                <div>
+                    <a href="Ulogin.aspx" class="login-btn">Login</a> <a href="Uregister.aspx" class="register-btn">Register</a>
                 </div>
                 <div class="hamburger">
                     <span class="bar"></span><span class="bar"></span><span class="bar"></span>
@@ -62,7 +63,7 @@
             <p>
                 Everything your furry friends need, all in one place</p>
             <div class="hero-buttons">
-                <a href="dog.aspx" class="btn btn-primary">Shop Dogs</a> <a href="cat.aspx" class="btn btn-secondary">Shop Cats</a>
+                <a href="Product.aspx" class="btn btn-primary">Shop Dogs</a> <a href="Product.aspx" class="btn btn-secondary">Shop Cats</a>
             </div>
         </div>
         <div class="hero-image">
@@ -80,84 +81,34 @@
                     <h3>Dogs</h3>
                     <p>
                         Find the perfect companion</p>
-                    <a href="dog.aspx" class="btn btn-outline">Shop Now</a>
+                    <a href="Product.aspx" class="btn btn-outline">Shop Now</a>
                 </div>
                 <div class="category-card">
                     <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Cats">
                     <h3>Cats</h3>
                     <p>
                         Adorable feline friends</p>
-                    <a href="cat.aspx" class="btn btn-outline">Shop Now</a>
+                    <a href="Product.aspx" class="btn btn-outline">Shop Now</a>
                 </div>
                 <div class="category-card">
                     <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Dog Food">
                     <h3>Dog Food</h3>
                     <p>
                         Nutritious meals for dogs</p>
-                    <a href="dog-food.aspx" class="btn btn-outline">Shop Now</a>
+                    <a href="Product.aspx" class="btn btn-outline">Shop Now</a>
                 </div>
                 <div class="category-card">
                     <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Cat Food">
                     <h3>Cat Food</h3>
                     <p>
                         Premium cat nutrition</p>
-                    <a href="cat-food.aspx" class="btn btn-outline">Shop Now</a>
+                    <a href="Product.aspx" class="btn btn-outline">Shop Now</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Products -->
-    <section class="featured-products">
-        <div class="container">
-            <h2>Featured Products</h2>
-            <div class="products-grid" id="featured-products">
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Golden Retriever Puppy" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-name">Golden Retriever Puppy</h3>
-                        <p class="product-price">
-                            $1200</p>
-                        <button class="add-to-cart" onclick="addToCart(1, 'dogs')">
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="German Shepherd" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-name">German Shepherd</h3>
-                        <p class="product-price">
-                            $1000</p>
-                        <button class="add-to-cart" onclick="addToCart(2, 'dogs')">
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Persian Cat" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-name">Persian Cat</h3>
-                        <p class="product-price">
-                            $800</p>
-                        <button class="add-to-cart" onclick="addToCart(5, 'cats')">
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Maine Coon" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-name">Maine Coon</h3>
-                        <p class="product-price">
-                            $900</p>
-                        <button class="add-to-cart" onclick="addToCart(6, 'cats')">
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
     </section>
 </asp:Content>
 <asp:Content ID="Content4" runat="server" contentplaceholderid="ContentPlaceHolder3">
@@ -178,32 +129,31 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="Uindex.aspx">Home</a></li>
-                        <li><a href="about.aspx">About Us</a></li>
-                        <li><a href="contact.aspx">Contact</a></li>
+                        <li><a href="Uabout.aspx">About Us</a></li>
+                        <li><a href="Ucontact.aspx">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Products</h4>
                     <ul>
-                        <li><a href="dog.aspx">Dogs</a></li>
-                        <li><a href="cat.aspx">Cats</a></li>
-                        <li><a href="dog-food.aspx">Dog Food</a></li>
-                        <li><a href="cat-food.aspx">Cat Food</a></li>
+                        <li><a href="Product.aspx">Dogs</a></li>
+                        <li><a href="Product.aspx">Cats</a></li>
+                        <li><a href="Product.aspx">Dog Food</a></li>
+                        <li><a href="Product.aspx">Cat Food</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contact Info</h4>
                     <p>
-                        <i class="fas fa-phone"></i>+1 (555) 123-4567</p>
+                        <i class="fas fa-phone"></i> +91 92655 69655</p>
                     <p>
-                        <i class="fas fa-envelope"></i>info@petshop.com</p>
+                        <i class="fas fa-envelope"></i> petshop@gmail.com</p>
                     <p>
-                        <i class="fas fa-map-marker-alt"></i>123 Pet Street, City</p>
+                        <i class="fas fa-map-marker-alt"></i> KKV Chowk, Rajkot.</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>
-                    &copy; 2024 PetShop. All rights reserved.</p>
+                <p>PetShop</p>
             </div>
         </div>
     </footer>

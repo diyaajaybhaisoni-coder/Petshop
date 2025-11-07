@@ -162,7 +162,7 @@
         
  </div>
  
- <script>
+ <%--<script>
      function addToCart() {
          alert('Product added to cart!');
      }
@@ -170,7 +170,7 @@
      function addToWishlist() {
          alert('Added to wishlist!');
      }
- </script>
+ </script>--%>
        
 </asp:Content>
 
@@ -363,16 +363,18 @@
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.aspx" class="nav-link active">Home</a> </li>
-                    <li class="nav-item dropdown"><a href="#" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+                    <%--<li class="nav-item dropdown"><a href="#" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
                             <a href="dog.aspx">Dogs</a> <a href="cat.aspx">Cats</a> <a href="dog-food.aspx">Dog Food</a> <a href="cat-food.aspx">Cat Food</a>
                         </div>
-                    </li>
+                    </li>--%>
+                    <li class="nav-item"><a href="Product.aspx" class="nav-link">Product</a> </li>
                     <li class="nav-item"><a href="Uabout.aspx" class="nav-link">About Us</a> </li>
                     <li class="nav-item"><a href="Ucontact.aspx" class="nav-link">Contact</a> </li>
+                    <li class="nav-item"><a href="Cart.aspx" class="nav-link">Cart</a> </li>
                 </ul>
-                <div class="nav-actions">
-                    <a href="cart.aspx" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span> </a><a href="admin/login.aspx" class="admin-btn" style="background: #2c3e50; color: white; padding: 8px 16px; border-radius: 25px; text-decoration: none; font-weight: 500; transition: all 0.3s ease;"><i class="fas fa-shield-alt"></i>Admin </a><a href="Ulogin.aspx" class="login-btn">Login</a> <a href="Uregister.aspx" class="register-btn">Register</a>
+                <div>
+                     <a href="Ulogin.aspx" class="login-btn">Login</a> <a href="Uregister.aspx" class="register-btn">Register</a>
                 </div>
                 <div class="hamburger">
                     <span class="bar"></span><span class="bar"></span><span class="bar"></span>

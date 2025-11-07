@@ -19,16 +19,18 @@
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.aspx" class="nav-link active">Home</a> </li>
-                    <li class="nav-item dropdown"><a href="#" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+                    <%--<li class="nav-item dropdown"><a href="#" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
                             <a href="dog.aspx">Dogs</a> <a href="cat.aspx">Cats</a> <a href="dog-food.aspx">Dog Food</a> <a href="cat-food.aspx">Cat Food</a>
                         </div>
-                    </li>
-                    <li class="nav-item"><a href="about.aspx" class="nav-link">About Us</a> </li>
-                    <li class="nav-item"><a href="contact.aspx" class="nav-link">Contact</a> </li>
+                    </li>--%>
+                    <li class="nav-item"><a href="Product.aspx" class="nav-link">Product</a> </li>
+                    <li class="nav-item"><a href="Uabout.aspx" class="nav-link">About Us</a> </li>
+                    <li class="nav-item"><a href="Ucontact.aspx" class="nav-link">Contact</a> </li>
+                    <li class="nav-item"><a href="Cart.aspx" class="nav-link">Cart</a> </li>
                 </ul>
-                <div class="nav-actions">
-                    <a href="cart.aspx" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span> </a><a href="admin/login.aspx" class="admin-btn" style="background: #2c3e50; color: white; padding: 8px 16px; border-radius: 25px; text-decoration: none; font-weight: 500; transition: all 0.3s ease;"><i class="fas fa-shield-alt"></i>Admin </a><a href="login.aspx" class="login-btn">Login</a> <a href="register.aspx" class="register-btn">Register</a>
+                <div>
+                    <a href="Ulogin.aspx" class="login-btn">Login</a> <a href="Uregister.aspx" class="register-btn">Register</a>
                 </div>
                 <div class="hamburger">
                     <span class="bar"></span><span class="bar"></span><span class="bar"></span>
@@ -246,7 +248,7 @@
 </asp:Content>
 <asp:Content ID="Content4" runat="server" contentplaceholderid="ContentPlaceHolder3">
                 
-    <!-- Footer -->
+      <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -261,33 +263,32 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.aspx">Home</a></li>
-                        <li><a href="about.aspx">About Us</a></li>
-                        <li><a href="contact.aspx">Contact</a></li>
+                        <li><a href="Uindex.aspx">Home</a></li>
+                        <li><a href="Uabout.aspx">About Us</a></li>
+                        <li><a href="Ucontact.aspx">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Products</h4>
                     <ul>
-                        <li><a href="dog.aspx">Dogs</a></li>
-                        <li><a href="cat.aspx">Cats</a></li>
-                        <li><a href="dog-food.aspx">Dog Food</a></li>
-                        <li><a href="cat-food.aspx">Cat Food</a></li>
+                        <li><a href="Product.aspx">Dogs</a></li>
+                        <li><a href="Product.aspx">Cats</a></li>
+                        <li><a href="Product.aspx">Dog Food</a></li>
+                        <li><a href="Product.aspx">Cat Food</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contact Info</h4>
                     <p>
-                        <i class="fas fa-phone"></i>+1 (555) 123-4567</p>
+                        <i class="fas fa-phone"></i> +91 92655 69655</p>
                     <p>
-                        <i class="fas fa-envelope"></i>info@petshop.com</p>
+                        <i class="fas fa-envelope"></i> petshop@gmail.com</p>
                     <p>
-                        <i class="fas fa-map-marker-alt"></i>123 Pet Street, City</p>
+                        <i class="fas fa-map-marker-alt"></i> KKV Chowk, Rajkot.</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>
-                    &copy; 2024 PetShop. All rights reserved.</p>
+                <p>PetShop</p>
             </div>
         </div>
     </footer>
