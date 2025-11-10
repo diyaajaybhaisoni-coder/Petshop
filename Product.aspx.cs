@@ -23,6 +23,10 @@ namespace PetShop
         int row = 3, p;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["admin"] == null)
+            {
+                Response.Redirect("Ulogin.aspx");
+            }
             getcon();
             filllist();
         }
@@ -90,16 +94,19 @@ namespace PetShop
                 da.Fill(ds);
 
 
-                string name = ds.Tables[0].Rows[0][3].ToString();
-                string price = ds.Tables[0].Rows[0][5].ToString();
-                string img = ds.Tables[0].Rows[0][2].ToString();
+                string name = ds.Tables[0].Rows[0]["Name"].ToString();
+                string price = ds.Tables[0].Rows[0]["Price"].ToString();
+                string img = ds.Tables[0].Rows[0]["Image"].ToString();
                 string Category = ds.Tables[0].Rows[0]["Category"].ToString();
 
                 int Quantity = 1;
 
                 cmd = new SqlCommand("INSERT INTO Cartt(User_Cart_Id, Prod_cart_Id, Image, Name, Category, Price, Quantity) VALUES ('" + userid + "','" + prodid + "','" + img + "','" + name + "','" + Category + "','" + price + "','" + Quantity + "')", con);
 
-                cmd.ExecuteNonQuery();
+                if (cmd.ExecuteNonQuery() > 0)
+                { 
+                    Response.Redirect("Cart.aspx");
+                }
 
             }
         }
@@ -177,7 +184,6 @@ namespace PetShop
             pg.DataSource = ds.Tables[0].DefaultView;
             DataList1.DataSource = pg;
             DataList1.DataBind();
-
         }
     }
 }

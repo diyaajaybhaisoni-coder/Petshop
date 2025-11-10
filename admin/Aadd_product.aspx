@@ -149,6 +149,145 @@
       padding: 20px;
       color: #777;
     }
+
+    /* Form-box ને page ના વચ્ચે લાવવા માટે */
+.container {
+  display: flex;
+  justify-content: center; /* હોરિઝોન્ટલ સેન્ટર */
+  align-items: center;      /* વર્ટિકલ સેન્ટર */
+  flex-direction: column;   /* એક નીચે એક */
+  min-height: 80vh;         /* page ની height */
+}
+
+/* ફોર્મ બોક્સનું સાઈઝ અને દેખાવ */
+.form-box {
+  width: 60%;              /* પહોળાઈ */
+  max-width: 700px;        /* સૌથી વધારે પહોળાઈ */
+  min-width: 400px;        /* સૌથી ઓછી પહોળાઈ */
+  background: #f8faff;     /* હળવો કલર */
+  border-radius: 12px;
+  border: 1px solid #c9dbff;
+  padding: 30px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* અંદરનાં ઈનપુટ અને બટનને સુધારવું */
+.form-box input,
+.form-box select,
+.form-box textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid #c5d9f7;
+  font-size: 15px;
+}
+
+.form-box button {
+  width: 100%;
+  background: #2b68d9;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-box button:hover {
+  background: #1e55c1;
+}
+
+/* ફોર્મને page ના બિલકુલ મધ્યમાં લાવવા માટે */
+.container {
+  position: relative;
+  min-height: 100vh;          /* આખી સ્ક્રીન જેટલી height */
+  display: flex;
+  justify-content: center;    /* horizontally center */
+  align-items: center;        /* vertically center */
+  flex-direction: column;
+}
+
+/* ફોર્મ બોક્સનું ડિઝાઇન */
+.form-box {
+  width: 50%;
+  max-width: 600px;
+  background: #f8faff;
+  border-radius: 12px;
+  border: 1px solid #c9dbff;
+  padding: 35px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ઇનપુટ, dropdown, ટેક્સ્ટ એરિયા વગેરે */
+.form-box input,
+.form-box select,
+.form-box textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #c5d9f7;
+  font-size: 15px;
+}
+
+/* બટન */
+.form-box button {
+  width: 100%;
+  background: #2b68d9;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-box button:hover {
+  background: #1e55c1;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #222;
+}
+
+
+.main-content {
+  display: flex;
+  flex-direction: column; 
+}
+
+.main-content > div {
+  width: 100%;
+}
+
+/* ફોર્મ અને ટેબલ વચ્ચે થોડું જગ્યા રાખવા માટે */
+.main-content .form-box {
+  margin-bottom: 25px;
+}
+
+#GridView1 {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#GridView1 th, #GridView1 td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+#GridView1 th {
+  background-color: #e4f0ff;
+  font-weight: bold;
+}
   </style>
 </head>
     <!DOCTYPE html>
@@ -245,6 +384,7 @@
 
 <%--        <button>Save</button>--%>
       </div>
+        <br />
 
     <div>
              <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCommand="GridView1_RowCommand" >

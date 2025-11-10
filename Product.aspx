@@ -11,127 +11,126 @@
         <title>PetShop - Your Pet's Best Friend</title>
         <link rel="stylesheet" href="styles.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-       <style>
-           body {
-    background-color: #f8f9fb;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-}
+        <style>
+            body {
+                background-color: #f8f9fb;
+                font-family: 'Poppins', sans-serif;
+                margin: 0;
+                padding: 0;
+            }
 
-/* Product Grid Layout */
-#DataList1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    padding: 20px;
-}
+            /* Product Grid Layout */
+            #DataList1 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 40px;
+                padding: 20px;
+            }
 
-/* Product Card */
-.product-card {
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    width: 260px;
-    padding: 20px;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-}
+            /* Product Card */
+            .product-card {
+                background: #fff;
+                border-radius: 20px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                width: 260px;
+                padding: 20px;
+                text-align: center;
+                transition: all 0.3s ease-in-out;
+            }
 
-.product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
+                .product-card:hover {
+                    transform: translateY(-8px);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                }
 
-.product-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 15px;
-}
+                .product-card img {
+                    width: 100%;
+                    height: 180px;
+                    object-fit: cover;
+                    border-radius: 15px;
+                    margin-bottom: 15px;
+                }
 
-.product-name {
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 5px;
-}
+            .product-name {
+                font-size: 18px;
+                font-weight: 600;
+                color: #333;
+                margin-bottom: 5px;
+            }
 
-.product-category {
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
+            .product-category {
+                color: #777;
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
 
-.product-price {
-    color: #ff6b6b;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
+            .product-price {
+                color: #ff6b6b;
+                font-weight: bold;
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
 
-.product-description {
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 15px;
-    min-height: 40px;
-}
+            .product-description {
+                font-size: 13px;
+                color: #666;
+                margin-bottom: 15px;
+                min-height: 40px;
+            }
 
-/* Buttons */
-.btn-add-cart, .btn-view-details {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    margin: 5px;
-    transition: background-color 0.3s ease;
-}
+            /* Buttons */
+            .btn-add-cart, .btn-view-details {
+                display: inline-block;
+                padding: 8px 16px;
+                border-radius: 8px;
+                font-weight: 600;
+                cursor: pointer;
+                text-decoration: none;
+                margin: 5px;
+                transition: background-color 0.3s ease;
+            }
 
-.btn-add-cart {
-    background-color: #007bff;
-    color: white !important;
-}
+            .btn-add-cart {
+                background-color: #007bff;
+                color: white !important;
+            }
 
-.btn-add-cart:hover {
-    background-color: #0056b3;
-}
+                .btn-add-cart:hover {
+                    background-color: #0056b3;
+                }
 
-.btn-view-details {
-    background-color: #ff6b6b;
-    color: white !important;
-}
+            .btn-view-details {
+                background-color: #ff6b6b;
+                color: white !important;
+            }
 
-.btn-view-details:hover {
-    background-color: #ff4b4b;
-}
+                .btn-view-details:hover {
+                    background-color: #ff4b4b;
+                }
 
-/* Pagination */
-.pagination-container {
-    text-align: center;
-    margin: 40px 0;
-}
+            /* Pagination */
+            .pagination-container {
+                text-align: center;
+                margin: 40px 0;
+            }
 
-.pagination-btn {
-    background-color: #ff6b6b;
-    color: #fff !important;
-    padding: 10px 18px;
-    border-radius: 8px;
-    text-decoration: none;
-    margin: 0 5px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-}
+            .pagination-btn {
+                background-color: #ff6b6b;
+                color: #fff !important;
+                padding: 10px 18px;
+                border-radius: 8px;
+                text-decoration: none;
+                margin: 0 5px;
+                font-weight: 600;
+                border: none;
+                cursor: pointer;
+            }
 
-.pagination-btn:hover {
-    background-color: #ff4b4b;
-}
-
-       </style>
+                .pagination-btn:hover {
+                    background-color: #ff4b4b;
+                }
+        </style>
         <%--<style>
         body {
             background-color: #f8f9fb;
@@ -279,50 +278,32 @@
                 </div>
             </div>
         </nav>
-
-        <!-- User Profile Section (shown when logged in) -->
-        <section class="user-profile-section" id="userProfileSection" style="display: none;">
-            <div class="container">
-                <div class="user-profile-content">
-                    <div class="user-info">
-                        <h2 id="welcomeMessage">Welcome back!</h2>
-                        <p id="userLocation">
-                            Ready to find something special for your pet?
-                        </p>
-                    </div>
-                    <div class="user-actions">
-                        <a href="cart.aspx" class="btn">
-                            <asp:View runat="server"></asp:View> Cart</a> <a href="dog.aspx" class="btn">Shop Dogs</a> <a href="cat.aspx" class="btn">Shop Cats</a>
-                    </div>
-                </div>
-            </div>
-        </section>
 </asp:Content>
 <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="ContentPlaceHolder2">
     <br />
     <br />
     <br />
-    
-        <div class="container">
-    <div class="heading_container heading_center">
-        <h2>Our Products</h2>
-    </div>
 
-    <ul class="filters_menu" style="list-style: none; display: flex; gap: 10px; justify-content: center;">
-        <asp:Button ID="Button6" runat="server" Text="All" CssClass="btn btn-primary" OnClick="Button6_Click"/>
-        <asp:Button ID="Button7" runat="server" Text="Dog" CssClass="btn btn-primary" OnClick="Button7_Click"  />
-        <asp:Button ID="Button8" runat="server" Text="Cat" CssClass="btn btn-primary" OnClick="Button8_Click"  />
-        <asp:Button ID="Button9" runat="server" Text="Dog-Food" CssClass="btn btn-primary" OnClick="Button9_Click"  />
-        <asp:Button ID="Button10" runat="server" Text="Cat-Food" CssClass="btn btn-primary" OnClick="Button10_Click"  />
-    </ul>
-</div> 
-                <%--<asp:DropDownList ID="ddlCategory" runat="server" AutoPostBack="true"  CssClass="form-control" style="min-width:150px;" >
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>Our Products</h2>
+        </div>
+
+        <ul class="filters_menu" style="list-style: none; display: flex; gap: 10px; justify-content: center;">
+            <asp:Button ID="Button6" runat="server" Text="All" CssClass="btn btn-primary" OnClick="Button6_Click" />
+            <asp:Button ID="Button7" runat="server" Text="Dog" CssClass="btn btn-primary" OnClick="Button7_Click" />
+            <asp:Button ID="Button8" runat="server" Text="Cat" CssClass="btn btn-primary" OnClick="Button8_Click" />
+            <asp:Button ID="Button9" runat="server" Text="Dog-Food" CssClass="btn btn-primary" OnClick="Button9_Click" />
+            <asp:Button ID="Button10" runat="server" Text="Cat-Food" CssClass="btn btn-primary" OnClick="Button10_Click" />
+        </ul>
+    </div>
+    <%--<asp:DropDownList ID="ddlCategory" runat="server" AutoPostBack="true"  CssClass="form-control" style="min-width:150px;" >
     <asp:ListItem Text="All Categories" Value="All"></asp:ListItem>
 </asp:DropDownList>--%>
     <asp:DataList ID="DataList1" runat="server" CellPadding="10" RepeatDirection="Horizontal" CellSpacing="50" OnItemCommand="DataList1_ItemCommand">
         <ItemTemplate>
             <div class="product-card">
-<%--                <asp:Image ID="Image1" Height="180px" Width="180px" runat="server" ImageUrl='<%# ResolveUrl("~/admin/" + Eval("Image")) %>' />--%>
+                <%--                <asp:Image ID="Image1" Height="180px" Width="180px" runat="server" ImageUrl='<%# ResolveUrl("~/admin/" + Eval("Image")) %>' />--%>
                 <asp:Image ID="Image2" Height="180px" Width="180px" runat="server" ImageUrl='<%#  ResolveUrl("~/admin/" + Eval("Image")) %>' />
 
                 <div class="product-name">
@@ -336,9 +317,9 @@
                 <div>
                     <asp:Label ID="Label3" runat="server" Text='<%# Eval("Price") %>'></asp:Label>
                 </div>
-                
+
                 <div>
-                <asp:Label ID="Label4" runat="server" Text='<%# Eval("Description") %>'></asp:Label>
+                    <asp:Label ID="Label4" runat="server" Text='<%# Eval("Description") %>'></asp:Label>
                 </div>
                 <%-- <asp:LinkButton ID="btnViewDetails" runat="server" Text="View Details" 
                 CssClass="btn-view-details" 
@@ -354,29 +335,29 @@
                 <br>
 
                     <br>
-                <br>
-                <br>
-                <br></br>
-                <%-- <asp:LinkButton ID="cmd_vd" runat="server" CommandArgument='<%# Eval("Id") %>' CssClass="btn-add-cart">View Details</asp:LinkButton>--%>
-                <br>
-                <br>
-                <br></br>
-                <br>
-                <br></br>
-                <br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                </br>
-                </br>
-                </br>
-                </br>
-                </br>
-                </br>
+                        <br>
+                            <br>
+                                <br></br>
+                                <%-- <asp:LinkButton ID="cmd_vd" runat="server" CommandArgument='<%# Eval("Id") %>' CssClass="btn-add-cart">View Details</asp:LinkButton>--%>
+                                <br>
+                                    <br>
+                                        <br></br>
+                                        <br>
+                                            <br></br>
+                                            <br>
+                                                <br></br>
+                                                <br></br>
+                                                <br></br>
+                                                <br></br>
+                                                <br></br>
+                                            </br>
+                                        </br>
+                                    </br>
+                                </br>
+                            </br>
+                        </br>
 
-                </br>
+                    </br>
 
                 </br>
             </div>
@@ -494,14 +475,15 @@
 </asp:Content>
 <asp:Content ID="Content4" runat="server" ContentPlaceHolderID="ContentPlaceHolder3">
 
-       <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>PetShop</h3>
                     <p>
-                        Your trusted partner in pet care for over 10 years.</p>
+                        Your trusted partner in pet care for over 10 years.
+                    </p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -526,11 +508,14 @@
                 <div class="footer-section">
                     <h4>Contact Info</h4>
                     <p>
-                        <i class="fas fa-phone"></i> +91 92655 69655</p>
+                        <i class="fas fa-phone"></i>+91 92655 69655
+                    </p>
                     <p>
-                        <i class="fas fa-envelope"></i> petshop@gmail.com</p>
+                        <i class="fas fa-envelope"></i>petshop@gmail.com
+                    </p>
                     <p>
-                        <i class="fas fa-map-marker-alt"></i> KKV Chowk, Rajkot.</p>
+                        <i class="fas fa-map-marker-alt"></i>KKV Chowk, Rajkot.
+                    </p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -540,7 +525,7 @@
     </footer>
 
     <script src="script.js"></script>
-</body>
+    </body>
 </html>
 </asp:Content>
 

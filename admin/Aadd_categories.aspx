@@ -159,7 +159,7 @@
           <asp:Label ID="Label1" runat="server" Text="Pet/Food"></asp:Label>
           <asp:TextBox ID="txtpet" runat="server"></asp:TextBox>
 
-          <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+          <asp:Button ID="Button1" runat="server" Text="Save" OnClick="Button1_Click" />
         <%--<label>Pet Name (Dog / Cat)</label>
         <input type="text" placeholder="Dog or Cat">--%>
 
@@ -171,26 +171,6 @@
 
 <%--        <button>Save</button>--%>
 <%--        <p><b>Details:</b> pet name, food name, image.</p>--%>
-      </div>
-
-      <!-- Right Card -->
-      <div class="card table-box">
-        <input type="text" placeholder="Search...">
-        <table>
-          <thead>
-            <tr>
-              <th>Image</th>
-              <th>Pet</th>
-              <th>Food</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan="4" class="no-data">No categories</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
   </div>

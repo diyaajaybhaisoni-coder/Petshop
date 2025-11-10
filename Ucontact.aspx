@@ -1,17 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User.Master" AutoEventWireup="true" CodeBehind="Ucontact.aspx.cs" Inherits="PetShop.Ucontact" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
-                <!DOCTYPE html>
+<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
+    <!DOCTYPE html>
     <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>PetShop - Your Pet's Best Friend</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PetShop - Your Pet's Best Friend</title>
         <link rel="stylesheet" href="styles.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     </head>
     <body>
-    <!-- Navigation -->
+        <!-- Navigation -->
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
@@ -19,15 +21,10 @@
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="Uindex.aspx" class="nav-link active">Home</a> </li>
-                    <%--<li class="nav-item dropdown"><a href="#" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="dog.aspx">Dogs</a> <a href="cat.aspx">Cats</a> <a href="dog-food.aspx">Dog Food</a> <a href="cat-food.aspx">Cat Food</a>
-                        </div>
-                    </li>--%>
                     <li class="nav-item"><a href="Product.aspx" class="nav-link">Product</a> </li>
                     <li class="nav-item"><a href="Uabout.aspx" class="nav-link">About Us</a> </li>
                     <li class="nav-item"><a href="Ucontact.aspx" class="nav-link">Contact</a> </li>
-                                        <li class="nav-item"><a href="Cart.aspx" class="nav-link">Cart</a> </li>
+                    <li class="nav-item"><a href="Cart.aspx" class="nav-link">Cart</a> </li>
                 </ul>
                 <div>
                     <a href="Ulogin.aspx" class="login-btn">Login</a> <a href="Uregister.aspx" class="register-btn">Register</a>
@@ -37,146 +34,128 @@
                 </div>
             </div>
         </nav>
+</asp:Content>
+<asp:Content ID="Content3" runat="server" ContentPlaceHolderID="ContentPlaceHolder2">
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you</p>
+        </div>
+    </section>
 
-    <!-- User Profile Section (shown when logged in) -->
-        <section class="user-profile-section" id="userProfileSection" style="display: none;">
-            <div class="container">
-                <div class="user-profile-content">
-                    <div class="user-info">
-                        <h2 id="welcomeMessage">Welcome back!</h2>
-                        <p id="userLocation">
-                            Ready to find something special for your pet?</p>
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions about our pets or products? Need advice on pet care? We're here to help!</p>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Visit Our Store</h3>
+                            <p>
+                                KKV Chowk, Rajkot.<br>
+                            </p>
+                        </div>
                     </div>
-                    <div class="user-actions">
-                        <a href="cart.aspx" class="btn">View Cart</a> <a href="dog.aspx" class="btn">Shop Dogs</a> <a href="cat.aspx" class="btn">Shop Cats</a>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>
+                                +91 92655 69655<br>
+                                Mon-Fri: 9AM-7PM, Sat-Sun: 10AM-6PM
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>
+                                petshop@gmail.com<br>
+                                support@petshop.com
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
                     </div>
                 </div>
+
+                <div class="contact-form-container">
+                    <h2>Send us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <asp:Label ID="Label1" runat="server" Text="Name:"></asp:Label>
+                            <asp:TextBox ID="txtnm" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="Label2" runat="server" Text="Email:"></asp:Label>
+                            <asp:TextBox ID="txteml" runat="server"></asp:TextBox>
+
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="Label3" runat="server" Text="Message:"></asp:Label>
+                            <asp:TextBox ID="txtmsg" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <asp:Button ID="Button1" runat="server" Text="Submit" class="btn btn-primary" Style="width: 100%;" OnClick="Button1_Click" />
+                    </form>
+                </div>
             </div>
-        </section>
-</asp:Content>
-<asp:Content ID="Content3" runat="server" contentplaceholderid="ContentPlaceHolder2">
-     <!-- Page Header -->
- <section class="page-header">
-     <div class="container">
-         <h1>Contact Us</h1>
-         <p>We'd love to hear from you</p>
-     </div>
- </section>
+        </div>
+    </section>
 
- <!-- Contact Content -->
- <section class="contact-content">
-     <div class="container">
-         <div class="contact-grid">
-             <div class="contact-info">
-                 <h2>Get in Touch</h2>
-                 <p>Have questions about our pets or products? Need advice on pet care? We're here to help!</p>
-                 
-                 <div class="contact-item">
-                     <i class="fas fa-map-marker-alt"></i>
-                     <div>
-                         <h3>Visit Our Store</h3>
-                         <p>123 Pet Street<br>Pet City, PC 12345</p>
-                     </div>
-                 </div>
-                 
-                 <div class="contact-item">
-                     <i class="fas fa-phone"></i>
-                     <div>
-                         <h3>Call Us</h3>
-                         <p>+1 (555) 123-4567<br>Mon-Fri: 9AM-7PM, Sat-Sun: 10AM-6PM</p>
-                     </div>
-                 </div>
-                 
-                 <div class="contact-item">
-                     <i class="fas fa-envelope"></i>
-                     <div>
-                         <h3>Email Us</h3>
-                         <p>info@petshop.com<br>support@petshop.com</p>
-                     </div>
-                 </div>
-                 
-                 <div class="social-links">
-                     <h3>Follow Us</h3>
-                     <div class="social-icons">
-                         <a href="#"><i class="fab fa-facebook"></i></a>
-                         <a href="#"><i class="fab fa-twitter"></i></a>
-                         <a href="#"><i class="fab fa-instagram"></i></a>
-                         <a href="#"><i class="fab fa-youtube"></i></a>
-                     </div>
-                 </div>
-             </div>
-             
-             <div class="contact-form-container">
-                 <h2>Send us a Message</h2>
-                 <form id="contactForm" class="contact-form">
-                     <div class="form-group">
-                           <asp:Label ID="Label1" runat="server" Text="Name:"></asp:Label>
-                           <asp:TextBox ID="txtnm" runat="server" ></asp:TextBox>
-                         <%--<label for="contactName">Full Name</label>
-                         <input type="text" id="contactName" name="name" required>--%>
-                     </div>
-                     <div class="form-group">
-                         <asp:Label ID="Label2" runat="server" Text="Email:"></asp:Label>
-                         <asp:TextBox ID="txteml" runat="server" ></asp:TextBox>
-                        <%-- <label for="contactEmail">Email Address</label>
-                         <input type="email" id="contactEmail" name="email" required>--%>
-                     </div>
-                     <div class="form-group">
-                         <asp:Label ID="Label3" runat="server" Text="Message:"></asp:Label>
-                         <asp:TextBox ID="txtmsg" runat="server"></asp:TextBox>
-<%--                         <label for="subject">Subject</label>
-                         <input type="text" id="subject" name="subject" required>--%>
-                     </div>
-                     <div class="form-group">
- <%--                        <label for="message">Message</label>
-                         <textarea id="message" name="message" rows="5" required></textarea>--%>
-                     </div>
-                           <asp:Button ID="Button1" runat="server" Text="Submit" class="btn btn-primary" style="width: 100%;" OnClick="Button1_Click"  />
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Find Us</h2>
+            <div class="map-placeholder">
+                <i class="fas fa-map-marked-alt"></i>
+                <p>Interactive Map Coming Soon</p>
+                <p>123 Pet Street, Pet City, PC 12345</p>
+            </div>
+        </div>
+    </section>
 
-<%--                     <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>--%>
-                 </form>
-             </div>
-         </div>
-     </div>
- </section>
-
- <!-- Map Section -->
- <section class="map-section">
-     <div class="container">
-         <h2>Find Us</h2>
-         <div class="map-placeholder">
-             <i class="fas fa-map-marked-alt"></i>
-             <p>Interactive Map Coming Soon</p>
-             <p>123 Pet Street, Pet City, PC 12345</p>
-         </div>
-     </div>
- </section>
-
- <!-- FAQ Section -->
- <section class="faq-section">
-     <div class="container">
-         <h2>Frequently Asked Questions</h2>
-         <div class="faq-grid">
-             <div class="faq-item">
-                 <h3>What are your store hours?</h3>
-                 <p>We're open Monday-Friday 9AM-7PM and Saturday-Sunday 10AM-6PM. We're closed on major holidays.</p>
-             </div>
-             <div class="faq-item">
-                 <h3>Do you offer pet adoption services?</h3>
-                 <p>Yes! We work with local shelters and rescue organizations to help find loving homes for pets in need.</p>
-             </div>
-             <div class="faq-item">
-                 <h3>Can I return a pet if it doesn't work out?</h3>
-                 <p>We have a 30-day return policy for pets, but we encourage you to consider this decision carefully as pets are family members.</p>
-             </div>
-             <div class="faq-item">
-                 <h3>Do you offer pet grooming services?</h3>
-                 <p>Yes, we have professional groomers on staff. Please call ahead to schedule an appointment.</p>
-             </div>
-         </div>
-     </div>
- </section>
-              <%--      <!-- Hero Section -->
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What are your store hours?</h3>
+                    <p>We're open Monday-Friday 9AM-7PM and Saturday-Sunday 10AM-6PM. We're closed on major holidays.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer pet adoption services?</h3>
+                    <p>Yes! We work with local shelters and rescue organizations to help find loving homes for pets in need.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I return a pet if it doesn't work out?</h3>
+                    <p>We have a 30-day return policy for pets, but we encourage you to consider this decision carefully as pets are family members.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer pet grooming services?</h3>
+                    <p>Yes, we have professional groomers on staff. Please call ahead to schedule an appointment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <%--      <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>Welcome to PetShop</h1>
@@ -281,16 +260,17 @@
         </div>
     </section>--%>
 </asp:Content>
-<asp:Content ID="Content4" runat="server" contentplaceholderid="ContentPlaceHolder3">
-                
-        <!-- Footer -->
+<asp:Content ID="Content4" runat="server" ContentPlaceHolderID="ContentPlaceHolder3">
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>PetShop</h3>
                     <p>
-                        Your trusted partner in pet care for over 10 years.</p>
+                        Your trusted partner in pet care for over 10 years.
+                    </p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -315,11 +295,14 @@
                 <div class="footer-section">
                     <h4>Contact Info</h4>
                     <p>
-                        <i class="fas fa-phone"></i> +91 92655 69655</p>
+                        <i class="fas fa-phone"></i>+91 92655 69655
+                    </p>
                     <p>
-                        <i class="fas fa-envelope"></i> petshop@gmail.com</p>
+                        <i class="fas fa-envelope"></i>petshop@gmail.com
+                    </p>
                     <p>
-                        <i class="fas fa-map-marker-alt"></i> KKV Chowk, Rajkot.</p>
+                        <i class="fas fa-map-marker-alt"></i>KKV Chowk, Rajkot.
+                    </p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -329,7 +312,7 @@
     </footer>
 
     <script src="script.js"></script>
-</body>
+    </body>
 </html>
 
 </asp:Content>

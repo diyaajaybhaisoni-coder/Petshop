@@ -19,6 +19,10 @@ namespace PetShop
         DataSet ds;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["admin"] == null)
+            {
+                Response.Redirect("Ulogin.aspx");
+            }
             if (!IsPostBack)
             {
                 fill_grid();
@@ -31,19 +35,6 @@ namespace PetShop
         }
         void fill_grid()
         {
-            //getcon();
-            //da = new SqlDataAdapter("Select * from std_table where email ='" + Session["admin"] + "'", con);
-            //ds = new DataSet();
-            //da.Fill(ds);
-
-            //int uid = Convert.ToInt16(ds.Tables[0].Rows[0][0]);
-
-            //da = new SqlDataAdapter("Select * from cart_tbl where User_Cart_Id = '" + uid + "'", con);
-            //ds = new DataSet();
-            //da.Fill(ds);
-            //gvCart.DataSource = ds;
-            //gvCart.DataBind();
-
 
             getcon();
             da = new SqlDataAdapter("Select * from Uregister where email ='" + Session["admin"] + "'", con);
@@ -53,18 +44,8 @@ namespace PetShop
             if (ds.Tables[0].Rows.Count > 0)
             {
                 int uid = Convert.ToInt16(ds.Tables[0].Rows[0][0]);
-                //da = new SqlDataAdapter("select *, (Price * Quantity) as Total from cart_tbl where User_Cart_Id = '" + uid + "'", con);
-                //    string query = @"
-                //SELECT *, 
-                //       (TRY_CAST(Price AS DECIMAL(10,2)) * TRY_CAST(Quantity AS INT)) AS Total 
-                //FROM cart_tbl 
-                //WHERE User_Cart_Id = @UserId";
 
-                //    da = new SqlDataAdapter(query, con);
-                //    da.SelectCommand.Parameters.AddWithValue("@UserId", uid);
-                //da = new SqlDataAdapter("SELECT *, (Prod_Price * Prod_Quantity) AS Total FROM cart_tbl WHERE User_Cart_Id = '" + uid + "'", con);
-                da = new SqlDataAdapter("SELECT *, (TRY_CAST(Price AS DECIMAL(10,2)) * Quantity) AS Total FROM Cartt WHERE User_Cart_Id = '" + uid + "'", con);
-
+                da = new SqlDataAdapter("SELECT *, (TRY_CAST(Price AS DECIMAL(10,2)) * TRY_CAST(Quantity AS INT)) AS Total FROM Cartt WHERE User_Cart_Id = '" + uid + "'", con);
                 ds = new DataSet();
                 da.Fill(ds);
 
@@ -86,6 +67,64 @@ namespace PetShop
                 gvCart.DataBind();
                 lblFinalTotal.Text = "Final Total: ₹0.00";
             }
+      
+
+            ////getcon();
+            ////da = new SqlDataAdapter("Select * from std_table where email ='" + Session["admin"] + "'", con);
+            ////ds = new DataSet();
+            ////da.Fill(ds);
+
+            ////int uid = Convert.ToInt16(ds.Tables[0].Rows[0][0]);
+
+            ////da = new SqlDataAdapter("Select * from cart_tbl where User_Cart_Id = '" + uid + "'", con);
+            ////ds = new DataSet();
+            ////da.Fill(ds);
+            ////gvCart.DataSource = ds;
+            ////gvCart.DataBind();
+
+
+            //getcon();
+            //da = new SqlDataAdapter("Select * from Uregister where email ='" + Session["admin"] + "'", con);
+            //ds = new DataSet();
+            //da.Fill(ds);
+
+            //if (ds.Tables[0].Rows.Count > 0)
+            //{
+            //    int uid = Convert.ToInt16(ds.Tables[0].Rows[0][0]);
+            //    //da = new SqlDataAdapter("select *, (Price * Quantity) as Total from cart_tbl where User_Cart_Id = '" + uid + "'", con);
+            //    //    string query = @"
+            //    //SELECT *, 
+            //    //       (TRY_CAST(Price AS DECIMAL(10,2)) * TRY_CAST(Quantity AS INT)) AS Total 
+            //    //FROM cart_tbl 
+            //    //WHERE User_Cart_Id = @UserId";
+
+            //    //    da = new SqlDataAdapter(query, con);
+            //    //    da.SelectCommand.Parameters.AddWithValue("@UserId", uid);
+            //    //da = new SqlDataAdapter("SELECT *, (Prod_Price * Prod_Quantity) AS Total FROM cart_tbl WHERE User_Cart_Id = '" + uid + "'", con);
+            //    //da = new SqlDataAdapter("SELECT *, (TRY_CAST(Price AS DECIMAL(10,2)) * Quantity) AS Total FROM Cartt WHERE User_Cart_Id = '" + uid + "'", con);
+            //    da = new SqlDataAdapter("SELECT *, (TRY_CAST(Prod_Price AS DECIMAL(10,2)) * Prod_Quantity) AS Total FROM Cartt WHERE User_Cart_Id = '" + uid + "'", con);
+
+            //    ds = new DataSet();
+            //    da.Fill(ds);
+
+            //    gvCart.DataSource = ds;
+            //    gvCart.DataBind();
+
+            //    decimal finalTotal = 0;
+            //    foreach (DataRow dr in ds.Tables[0].Rows)
+            //    {
+            //        if (dr["Total"] != DBNull.Value)
+            //            finalTotal += Convert.ToDecimal(dr["Total"]);
+            //    }
+
+            //    lblFinalTotal.Text = "Final Total: ₹" + finalTotal.ToString("0.00");
+            //}
+            //else
+            //{
+            //    gvCart.DataSource = null;
+            //    gvCart.DataBind();
+            //    lblFinalTotal.Text = "Final Total: ₹0.00";
+            //}
         }
 
         protected void gvCart_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -101,7 +140,6 @@ namespace PetShop
                     int uid = Convert.ToInt16(ds.Tables[0].Rows[0][0]);
                     int ProdcartId = Convert.ToInt32(e.CommandArgument);
 
-                    // ✅ Delete record (no syntax change)
                     cmd = new SqlCommand("Delete from Cartt where Prod_cart_Id = '" + ProdcartId + "' AND User_Cart_Id = '" + uid + "'", con);
                     cmd.ExecuteNonQuery();
 
@@ -149,5 +187,10 @@ namespace PetShop
             }
         
     }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("checkout.aspx");
+        }
     }
 }

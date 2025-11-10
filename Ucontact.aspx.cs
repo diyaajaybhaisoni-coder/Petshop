@@ -19,6 +19,10 @@ namespace PetShop
         SqlCommand cmd;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["admin"] == null)
+            {
+                Response.Redirect("Ulogin.aspx");
+            }
             getcon();
 
         }
