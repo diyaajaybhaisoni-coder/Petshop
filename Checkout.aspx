@@ -10,28 +10,31 @@
     <br />
     <br />
     <center>
-        <h2>Checkout</h2>
+        <div class="container">
+            <h2>Checkout</h2>
 
-        <label for="txtEmail">Email</label>
-        <asp:TextBox ID="txtEmail" runat="server" Placeholder="Enter your email" CssClass="form-control" />
-        <br />
+            <label for="txtEmail">Email</label>
+            <asp:TextBox ID="txtEmail" runat="server" Placeholder="Enter your email" CssClass="form-control" />
+            <br />
 
 
-        <label for="txtShippingAddress">Shipping Address</label>
-        <asp:TextBox ID="txtShippingAddress" runat="server" TextMode="MultiLine" Rows="3" Placeholder="Enter your shipping address" />
-        <br />
-        <label>Payment Method</label>
-        <asp:RadioButtonList ID="rblPaymentMethod" runat="server" RepeatDirection="Horizontal" CssClass="payment-options">
-            <asp:ListItem Text="Cash on Delivery" Value="COD" Selected="True"></asp:ListItem>
-            <asp:ListItem Text="Credit/Debit Card" Value="Card"></asp:ListItem>
-            <asp:ListItem Text="UPI" Value="UPI"></asp:ListItem>
-        </asp:RadioButtonList>
-        <br />
+            <label for="txtShippingAddress">Shipping Address</label>
+            <asp:TextBox ID="txtShippingAddress" runat="server" TextMode="MultiLine" Rows="3" Placeholder="Enter your shipping address" />
+            <br />
+            <label>Payment Method</label>
+            <asp:RadioButtonList ID="rblPaymentMethod" runat="server" RepeatDirection="Horizontal" CssClass="payment-options">
+                <asp:ListItem Text="Cash on Delivery" Value="COD" Selected="True"></asp:ListItem>
+                <asp:ListItem Text="Credit/Debit Card" Value="Card"></asp:ListItem>
+                <asp:ListItem Text="UPI" Value="UPI"></asp:ListItem>
+            </asp:RadioButtonList>
+            <br />
 
-        <asp:Button ID="btnPlaceOrder" runat="server" Text="Place Order" CssClass="btn" OnClick="btnPlaceOrder_Click" />
-        <asp:Label ID="lblAmount" runat="server" CssClass="message" />
-        <br />
-        <asp:Label ID="lblMessage" runat="server" CssClass="message"></asp:Label>
+            <asp:Button ID="btnPlaceOrder" runat="server" Text="Place Order" CssClass="btn" OnClick="btnPlaceOrder_Click" />
+            <asp:Label ID="lblAmount" runat="server" CssClass="message" />
+            <br />
+            <asp:Label ID="lblMessage" runat="server" CssClass="message"></asp:Label>
+
+        </div>
     </center>
     <%--<!-- Hero Section -->
     <section class="hero">
@@ -228,6 +231,30 @@
             .error {
                 color: red;
             }
+
+
+            @media (max-width: 600px) {
+                .checkout-box {
+                    width: 90%;
+                }
+
+                input[type="text"],
+                input[type="email"],
+                textarea,
+                .btn,
+                .payment-options {
+                    width: 100%;
+                }
+            }
+
+            .container {
+                width: 450px;
+                margin: 50px auto;
+                background-color: #ffffff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+            }
         </style>
     </head>
     <body>
@@ -252,5 +279,60 @@
             </div>
         </nav>
 </asp:Content>
+
+
+<asp:Content ID="Content4" runat="server" ContentPlaceHolderID="ContentPlaceHolder3">
+
+    <%--<!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PetShop</h3>
+                    <p>
+                        Your trusted partner in pet care for over 10 years.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="Uindex.aspx">Home</a></li>
+                        <li><a href="Uabout.aspx">About Us</a></li>
+                        <li><a href="Ucontact.aspx">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="dog.aspx">Dogs</a></li>
+                        <li><a href="cat.aspx">Cats</a></li>
+                        <li><a href="dog-food.aspx">Dog Food</a></li>
+                        <li><a href="cat-food.aspx">Cat Food</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>
+                        <i class="fas fa-phone"></i>+1 (555) 123-4567</p>
+                    <p>
+                        <i class="fas fa-envelope"></i>info@petshop.com</p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>123 Pet Street, City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2024 PetShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>--%>
+</asp:Content>
+
 
 
