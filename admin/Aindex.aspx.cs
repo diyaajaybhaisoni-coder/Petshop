@@ -31,6 +31,9 @@ namespace PetShop.admin
 
             int category = GetTotalCategory();
             totalCategory.Text = category.ToString();
+
+            int Order = GetTotalOrder();
+            totalOrder.Text = category.ToString();
         }
 
         void getcon()
@@ -95,6 +98,23 @@ namespace PetShop.admin
             using (SqlConnection con = new SqlConnection(s))
             {
                 using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM add_cate", con))
+                {
+                    con.Open();
+                    count = (int)cmd.ExecuteScalar();
+                }
+            }
+
+            return count;
+        }
+
+        int GetTotalOrder()
+        {
+            int count = 0;
+
+
+            using (SqlConnection con = new SqlConnection(s))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM order_tbl", con))
                 {
                     con.Open();
                     count = (int)cmd.ExecuteScalar();

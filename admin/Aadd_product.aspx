@@ -171,7 +171,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* અંદરનાં ઈનપુટ અને બટનને સુધારવું */
 .form-box input,
 .form-box select,
 .form-box textarea {
@@ -200,17 +199,15 @@
   background: #1e55c1;
 }
 
-/* ફોર્મને page ના બિલકુલ મધ્યમાં લાવવા માટે */
 .container {
   position: relative;
-  min-height: 100vh;          /* આખી સ્ક્રીન જેટલી height */
+  min-height: 100vh;          
   display: flex;
-  justify-content: center;    /* horizontally center */
-  align-items: center;        /* vertically center */
+  justify-content: center;    
+  align-items: center;        
   flex-direction: column;
 }
 
-/* ફોર્મ બોક્સનું ડિઝાઇન */
 .form-box {
   width: 50%;
   max-width: 600px;
@@ -221,7 +218,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* ઇનપુટ, dropdown, ટેક્સ્ટ એરિયા વગેરે */
 .form-box input,
 .form-box select,
 .form-box textarea {
@@ -234,7 +230,6 @@
   font-size: 15px;
 }
 
-/* બટન */
 .form-box button {
   width: 100%;
   background: #2b68d9;
@@ -268,7 +263,6 @@
   width: 100%;
 }
 
-/* ફોર્મ અને ટેબલ વચ્ચે થોડું જગ્યા રાખવા માટે */
 .main-content .form-box {
   margin-bottom: 25px;
 }
@@ -303,7 +297,7 @@
             <div class="brand">
                 PetShop Admin</div>
             <nav>
-              <a href="Aindex.aspx" class="active">Dashboard</a> <a href="Aadd_categories.aspx">Add Category</a> <a href="Aadd_product.aspx">Add Product</a> <a href="Acontact.aspx">Contacts</a> <a href="Auser.aspx">Users</a> <a href="Acart.aspx">Carts</a>
+              <a href="Aindex.aspx" class="active">Dashboard</a> <a href="Aadd_categories.aspx">Add Category</a> <a href="Aadd_product.aspx">Add Product</a> <a href="Acontacts.aspx">Contacts</a> <a href="Auser.aspx">Users</a> <a href="Aorder.aspx">Order</a>
             </nav>
         </nav>
 <%--<!DOCTYPE html>

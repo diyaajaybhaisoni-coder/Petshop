@@ -26,21 +26,13 @@
                     <li class="nav-item"><a href="Ucontact.aspx" class="nav-link">Contact</a> </li>
                     <li class="nav-item"><a href="Cart.aspx" class="nav-link">Cart</a> </li>
                 </ul>
-                <%--<div>
+                <div>
                     <a href="Ulogin.aspx" class="login-btn">Login</a> <a href="Uregister.aspx" class="register-btn">Register</a>
                 </div>
                 <div class="hamburger">
                     <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                </div>--%>
-                <asp:PlaceHolder ID="login" runat="server">
-                    <a href="Ulogin.aspx">Login</a>
-                    <a href="Uregister.aspx">Register</a>
-                </asp:PlaceHolder>
-
-                <asp:PlaceHolder ID="logout" runat="server">
-                    <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" CssClass="btn btn-danger" />
-                </asp:PlaceHolder>
-
+                </div>
+                
             </div>
         </nav>
 </asp:Content>

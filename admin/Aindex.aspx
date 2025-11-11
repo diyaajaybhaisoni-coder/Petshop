@@ -19,7 +19,7 @@
                 PetShop Admin
             </div>
             <nav>
-                <a href="Aindex.aspx" class="active">Dashboard</a> <a href="Aadd_categories.aspx">Add Category</a> <a href="Aadd_product.aspx">Add Product</a> <a href="Acontact.aspx">Contacts</a> <a href="Auser.aspx">Users</a> <a href="Acart.aspx">Carts</a>
+                <a href="Aindex.aspx" class="active">Dashboard</a> <a href="Aadd_categories.aspx">Add Category</a> <a href="Aadd_product.aspx">Add Product</a> <a href="Acontacts.aspx">Contacts</a> <a href="Auser.aspx">Users</a> <a href="Aorder.aspx">Order</a>
             </nav>
         </nav>
 </asp:Content>
@@ -56,24 +56,16 @@
                 </div>--%>
             </div>
             <div class="card">
-                <h3>Carts</h3>
+                <h3>Orders</h3>
+                <asp:Label ID="totalOrder" runat="server" Text="0"></asp:Label>
+
+                <%-- <h3>Carts</h3>
                 <div id="statCarts" class="stat">
                     0
-                </div>
+                </div>--%>
             </div>
         </div>
     </main>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const { getAll } = AdminStorage;
-            document.getElementById('statCategories').textContent = getAll('categories').length;
-            document.getElementById('statProducts').textContent = getAll('products').length;
-            document.getElementById('statUsers').textContent = getAll('users').length;
-            document.getElementById('statContacts').textContent = getAll('contacts').length;
-            document.getElementById('statCarts').textContent = getAll('carts').length;
-        });
-    </script>
     </body>
 </html>
 </asp:Content>

@@ -58,56 +58,6 @@
     </section>
 </asp:Content>
 <asp:Content ID="Content4" runat="server" ContentPlaceHolderID="ContentPlaceHolder3">
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>PetShop</h3>
-                    <p>
-                        Your trusted partner in pet care for over 10 years.
-                    </p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="Uindex.aspx">Home</a></li>
-                        <li><a href="Uabout.aspx">About Us</a></li>
-                        <li><a href="Ucontact.aspx">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Products</h4>
-                    <ul>
-                        <li><a href="Product.aspx">Dogs</a></li>
-                        <li><a href="Product.aspx">Cats</a></li>
-                        <li><a href="Product.aspx">Dog Food</a></li>
-                        <li><a href="Product.aspx">Cat Food</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>
-                        <i class="fas fa-phone"></i>+91 92655 69655
-                    </p>
-                    <p>
-                        <i class="fas fa-envelope"></i>petshop@gmail.com
-                    </p>
-                    <p>
-                        <i class="fas fa-map-marker-alt"></i>KKV Chowk, Rajkot.
-                    </p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>PetShop</p>
-            </div>
-        </div>
-    </footer>
-
     <script src="script.js"></script>
     </body>
 </html>
